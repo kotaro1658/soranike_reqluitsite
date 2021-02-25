@@ -1,14 +1,49 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>SoranikeReqluit</title>
+    <title>SoranikeReqluit <%= yield(:title) %> </title>
     <%= csrf_meta_tags %>
+    <meta charset="utf-8">
+    <title>SORANIKE reqrute#4</title>
+    <meta name="">
+    <link rel="stylesheet" href="stylesheet.scss">
+    <link href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
   <body>
-    <%= yield %>
+    <div class="wrapper">
+      
+     <header>
+      <div id="header_left">
+       <div id="header_logo">
+        <h1><a href="https://soranike.com/">SORANIKE</a></h1>
+       </div>
+      </div>
+      <div id="header_right">
+       <nav>
+        <ul class="header_nav">
+         <li><a href="https://soranike.com/about">About</a></li>
+         <li><a href="https://soranike.com/service">Service</a></li>
+         <li><a href="https://soranike.com/work">Work</a></li>
+         <li><a href="https://soranike.com/news">News</a></li>
+         <li><a href="https://hackcamp-soranike.studio.site/">Recluit</a></li>
+         <li><a href="https://soranike.com/contact">Contact</a></li>
+        </ul>
+       </nav>
+      </div>
+     </header>
+
+      <main>
+        <%= yield %>
+      </main>
+      
+    </div>
+    <script src="script.js"></script>
   </body>
 </html>
